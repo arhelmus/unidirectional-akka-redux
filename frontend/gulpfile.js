@@ -9,9 +9,7 @@ const browserify = require('gulp-browserify')
 
 gulp.task('compile', () => {
   return gulp.src('./src/app.es6')
-          .pipe(babel({
-            presets: ['es2015', 'react']
-          }))
+          .pipe(babel())
           .pipe(browserify())
           .pipe(uglify())
           .pipe(gulp.dest('dist'))
