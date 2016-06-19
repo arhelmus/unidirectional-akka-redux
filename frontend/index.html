@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet the world</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-icon" id="open-menu"></div>
+  <menu id="menu">
+    <div class="close-icon" id="close-menu"></div>
+    <h4>About tweet the world</h4>
+    <p>This website created as social experiment. Here you can share your personal opinion anonymous. Your message must be less that 255 symbols, have only english letters and not contain foul words.</p>
+
+    <div class="footer">
+      <p>Share:</p>
+      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_pinterest"></a>
+        <a class="a2a_button_email"></a>
+      </div>
+    </p>
+  </menu>
+  <content>
+    <div class="logo">
+      <img src="./assets/logo.png" title="TWEET THE WORLD" alt="Tweet the world, share your opinion">
+    </div>
+    <div class="actual-tweet">
+      Confidence ebbs and flows - just because you have it one day does not mean you will have it forever.
+    </div>
+    <div class="share-mention">
+      <span class="pointer">></span>
+      <input type="text" placeholder="share your mention">
+    </div>
+  </content>
+
+  <script>
+    var menu = document.getElementById("menu")
+
+    var menuButton = document.getElementById("open-menu");
+    menuButton.addEventListener("click", function() {
+      menuButton.className += " hidden";
+      menu.className = "opened";
+    });
+
+    var closeButton = document.getElementById("close-menu");
+    closeButton.addEventListener("click", function() {
+      menuButton.className += "menu-icon";
+      menu.className = "";
+    });
+  </script>
+
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</body>
+</html>

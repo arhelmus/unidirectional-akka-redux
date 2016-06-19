@@ -1,0 +1,169 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700';
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  min-width: 400px;
+  height: 100%;
+
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.menu-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+
+  width: 1.6em;
+  height: 1.6em;
+  background-image: url("./assets/menu-icon.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu-icon:hover {
+  opacity: 0.9;
+}
+
+.menu-icon.hidden {
+  display: none;
+}
+
+menu {
+  width: 20em;
+  height: 100%;
+
+  position: absolute;
+  left: -30em;
+  padding: 1em 3em 1em 1em;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: #000000;
+  color: #FFFFFF;
+  transition: all 300ms ease-in;
+}
+
+menu.opened {
+  left: 0;
+}
+
+menu .close-icon {
+  width: 1.3em;
+  height: 1.3em;
+
+  float: right;
+  cursor: pointer;
+
+  position: relative;
+  left: 1.25em;
+  top: 0.75em;
+
+  background-image: url("./assets/close-icon.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+menu h4 {
+  font-size: 2em;
+  margin: 0;
+}
+
+menu p {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+menu .footer {
+  position: absolute;
+  bottom: 0em;
+}
+
+menu .footer p {
+  line-height: 0em;
+  margin-left: 2px;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  box-sizing: border-box;
+  padding: 3em 3em 6em 3em;
+
+  background-image: linear-gradient(
+                rgba(41, 128, 185, 0.89),
+                rgba(41, 128, 185, 0.89)
+              ),
+              url("./assets/bg.jpg");
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 100px 100px, cover,	cover;
+  background-position: top left, center center, bottom center;
+  background-attachment: fixed,	fixed, fixed;
+}
+
+content .logo img {
+  width: 9em;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+}
+
+content .logo img:hover {
+  opacity: 0.9;
+}
+
+content .actual-tweet {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #FFFFFF;
+
+  max-width: 22.4em;
+  margin-bottom: 3.2em;
+  margin-left: 0.7em;
+  box-sizing: border-box;
+  padding: 3em;
+}
+
+content .share-mention {
+  cursor: pointer;
+}
+
+content .share-mention .pointer {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-right: 0.2em;
+}
+
+content .share-mention input {
+  background: none;
+  border: none;
+
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+content .share-mention input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+content .share-mention input::-moz-placeholder {
+  color: #FFFFFF;
+}
+content .share-mention input::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+content .share-mention input::-moz-placeholder {
+  color: #FFFFFF;
+}
