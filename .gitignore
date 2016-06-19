@@ -12,9 +12,13 @@ src_managed/
 project/boot/
 project/plugins/project/
 
-# Scala-IDE specific
+# IDE specific
 .scala_dependencies
 .worksheet
+.idea
 
 # NPM specific
 node_modules
+
+# OS specific
+.DS_Store

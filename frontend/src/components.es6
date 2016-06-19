@@ -21,7 +21,7 @@ export class ShareBlock extends React.Component {
 export class TweetBlock extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {tweet: ""}
+    this.state = {tweet: "Wait a second, we a loading..."}
   }
 
   subscribeOnUpdates() {

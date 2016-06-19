@@ -17,7 +17,7 @@ gulp.task('compile', () => {
 })
 
 gulp.task('test', () => {
-  return gulp.src('./test/appTest.es6', {read: false})
+  return gulp.src('./test/*.es6', {read: false})
           .pipe(mocha({reporter: 'nyan'}))
 })
 
