@@ -91,6 +91,10 @@ menu .footer p {
   margin-left: 2px;
 }
 
+#content_wrapper {
+  height: 100%;
+}
+
 content {
   display: flex;
   flex-direction: column;
@@ -130,7 +134,7 @@ content .actual-tweet {
 
   max-width: 22.4em;
   margin-bottom: 3.2em;
-  margin-left: 0.7em;
+  
   box-sizing: border-box;
   padding: 3em;
 }

@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify')
 const mocha = require('gulp-mocha')
 const serve = require('gulp-serve')
 const browserify = require('gulp-browserify')
+const rename = require('gulp-rename')
 
 gulp.task('compile', () => {
   return gulp.src('./src/app.es6')
@@ -13,6 +14,7 @@ gulp.task('compile', () => {
             extensions: ['.es6']
           }))
           .pipe(uglify())
+          .pipe(rename('app.js'))
           .pipe(gulp.dest('dist'))
 })
 
@@ -26,6 +28,6 @@ gulp.task('build', ['test', 'compile'])
 gulp.task('serve', serve('dist'))
 
 gulp.task('default', ['serve'], () => {
-  gulp.watch('./src/*', ['build'])
+  gulp.watch('./src/*', ['test', 'compile'])
   gulp.watch('./test/*', ['test'])
 })
