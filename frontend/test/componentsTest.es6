@@ -79,7 +79,7 @@ describe('Share component', () => {
     input.value = "Test"
     submitInput(input)
 
-    expect(commandStore.getState().commandHistory[0]).toEqual({type: "PublishTweet", message: "Test"})
+    expect(commandStore.getState().lastCommand).toEqual({type: "PublishTweet", message: "Test"})
   })
 
 })

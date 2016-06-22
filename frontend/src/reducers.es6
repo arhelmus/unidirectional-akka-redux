@@ -9,11 +9,10 @@ export const eventReducer = (state = {tweet: ""}, event) => {
     }
 }
 
-export const commandReducer = (state = {commandHistory: []}, command) => {
+export const commandReducer = (state = {lastCommand: {}}, command) => {
   switch (command.type) {
     case "PublishTweet":
-      // Send tweet to server
-      return {commandHistory: [command, ...state.commandHistory]};
+      return {lastCommand: command};
     default:
       return state;
     }
