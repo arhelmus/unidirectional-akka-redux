@@ -1,18 +1,20 @@
-export const tweetEventReducer = (tweet = "", event) => {
+export const eventReducer = (state = {tweet: ""}, event) => {
   switch (event.type) {
     case 'TweetPublished':
-      return event.message
+      return Object.assign({}, state, {
+        tweet: event.message
+      })
     default:
-      return tweet
+      return state
     }
 }
 
-export const tweetCommandReducer = (command) => {
+export const commandReducer = (state = {commandHistory: []}, command) => {
   switch (command.type) {
     case "PublishTweet":
       // Send tweet to server
-      return;
+      return {commandHistory: [command, ...state.commandHistory]};
     default:
-      return;
+      return state;
     }
 }

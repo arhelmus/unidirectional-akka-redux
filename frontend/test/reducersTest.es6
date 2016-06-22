@@ -1,22 +1,22 @@
 import expect from 'expect'
 import { createStore } from 'redux'
 
-import { tweetEventReducer, tweetCommandReducer } from './../src/reducers.es6'
+import { eventReducer, commandReducer } from './../src/reducers.es6'
 
-describe('Tweet event reducer', () => {
+describe('Event reducer', () => {
 
   function createContext() {
-    const tweetEventStore = createStore(tweetEventReducer)
+    const eventStore = createStore(eventReducer)
 
     return {
-      tweetEventStore: tweetEventStore
+      eventStore: eventStore
     }
   }
 
   it ('should change tweet state on TweetPublished event', () => {
-    const { tweetEventStore } = createContext()
-    tweetEventStore.dispatch({type: 'TweetPublished', message: 'Test'})
-    expect(tweetEventStore.getState()).toBe('Test')
+    const { eventStore } = createContext()
+    eventStore.dispatch({type: 'TweetPublished', message: 'Test'})
+    expect(eventStore.getState().tweet).toBe('Test')
   })
 
 })
