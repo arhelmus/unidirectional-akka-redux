@@ -7,7 +7,6 @@ export class ShareComponent extends React.Component {
   }
 
   shareMention(e) {
-    e.preventDefault()
     if (e.charCode == 13) {
       this.props.commandStore.dispatch(Commands.publishTweet(e.target.value))
       e.target.value = ""
@@ -17,7 +16,7 @@ export class ShareComponent extends React.Component {
   render() {
     return <div className="share-mention">
       <span className="pointer">></span>
-      <input type="text" placeholder="share your mention" value="" onKeyPress={this.shareMention.bind(this)}/>
+      <input type="text" placeholder="share your mention" onKeyPress={this.shareMention.bind(this)}/>
     </div>
   }
 }

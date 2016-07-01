@@ -16,7 +16,7 @@ describe('Event reducer', () => {
 
   it ('should change tweet state on TweetPublished event', () => {
     const { eventStore } = createContext()
-    eventStore.dispatch({type: 'TweetPublished', message: 'Test'})
+    eventStore.dispatch({type: 'TweetPublished', tweet: 'Test'})
     expect(eventStore.getState().tweet).toBe('Test')
   })
 

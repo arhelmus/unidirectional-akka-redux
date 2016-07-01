@@ -1,6 +1,6 @@
-export const publishTweet = (tweet) => {
+export const publishTweet = (msg) => {
   return {
     type: "PublishTweet",
-    message: tweet
+    tweet: msg
   }
 }

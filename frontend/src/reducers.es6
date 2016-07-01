@@ -2,7 +2,7 @@ export const eventReducer = (state = {tweet: ""}, event) => {
   switch (event.type) {
     case 'TweetPublished':
       return Object.assign({}, state, {
-        tweet: event.message
+        tweet: event.tweet
       })
     default:
       return state
