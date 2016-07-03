@@ -1,0 +1,18 @@
+{
+  "name": "unidirectional-akka-redux",
+  "description": "Example of unidirectional application on top of Akka, React, Redux.",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-scala"
+    }
+  ]
+}
