@@ -3,7 +3,7 @@ package me.archdev
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import me.archdev.http.{HttpRoute, HttpServer}
-import me.archdev.websocket.WebSocketRouteActor
+import me.archdev.websocket.RouteActor$
 
 object Boot extends App {
 
@@ -11,7 +11,7 @@ object Boot extends App {
   implicit val flowMaterializer = ActorMaterializer()
 
   val tweetRoomActor = TweetRoomActor()
-  val routeActor = WebSocketRouteActor(tweetRoomActor)
+  val routeActor = RouteActor(tweetRoomActor)
 
   new HttpServer(HttpRoute(routeActor)).launch("localhost", 8080)
 

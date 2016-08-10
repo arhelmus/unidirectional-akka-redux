@@ -4,9 +4,10 @@ import java.util.UUID
 
 import akka.stream.scaladsl.{Keep, Sink}
 import akka.testkit.TestProbe
+import me.archdev.RouteActor
 import me.archdev.TweetRoomActor.PublishTweet
 import me.archdev.util.ActorTest
-import me.archdev.websocket.WebSocketRouteActor.{Connect, Disconnect}
+import RouteActor.{Connect, Disconnect}
 import org.scalatest.{Matchers, WordSpecLike}
 
 class WebSocketMessageHandlerTest extends ActorTest with WordSpecLike with Matchers {

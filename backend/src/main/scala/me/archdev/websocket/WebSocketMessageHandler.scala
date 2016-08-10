@@ -5,9 +5,10 @@ import akka.http.scaladsl.model.ws.{Message, TextMessage}
 import akka.stream.OverflowStrategy
 import akka.stream.scaladsl.{Flow, Sink, Source}
 import cats.data.Xor
+import me.archdev.RouteActor
 import me.archdev.api.external._
 import me.archdev.api.internal._
-import me.archdev.websocket.WebSocketRouteActor.{Connect, Disconnect}
+import RouteActor.{Connect, Disconnect}
 
 object WebSocketMessageHandler {
 

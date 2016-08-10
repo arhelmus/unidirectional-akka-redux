@@ -1,19 +1,19 @@
-package me.archdev.websocket
+package me.archdev
 
 import java.util.UUID
 
 import akka.testkit.{TestActorRef, TestProbe}
+import me.archdev.RouteActor.{Connect, Disconnect}
 import me.archdev.TweetRoomActor.{PublishTweet, Subscribe, TweetRoomCommand, UnSubscribe}
 import me.archdev.api.internal.{ErrorMessageShowed, ShowErrorMessage}
 import me.archdev.util.ActorTest
-import me.archdev.websocket.WebSocketRouteActor.{Connect, Disconnect}
 import org.scalatest.{Matchers, WordSpecLike}
 
-class WebSocketRouteActorTest extends ActorTest with WordSpecLike with Matchers {
+class RouteActorTest extends ActorTest with WordSpecLike with Matchers {
 
   trait Context {
     val tweetRoomActorProbe = TestProbe()
-    val routeActor = TestActorRef(new WebSocketRouteActor(tweetRoomActorProbe.ref))
+    val routeActor = TestActorRef(new RouteActor(tweetRoomActorProbe.ref))
     val userId = UUID.randomUUID().toString
 
     def connect() = routeActor ! Connect(userId, testActor)
