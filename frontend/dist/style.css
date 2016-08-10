@@ -40,7 +40,7 @@ menu {
 
   position: absolute;
   left: -30em;
-  padding: 1em 3em 1em 1em;
+  padding: 1em 3em 1em 1.6em;
   margin: 0;
   box-sizing: border-box;
 
@@ -83,7 +83,7 @@ menu p {
 
 menu .footer {
   position: absolute;
-  bottom: 0em;
+  bottom: 0.8em;
 }
 
 menu .footer p {
