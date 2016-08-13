@@ -28,9 +28,7 @@ Websocket [connection handled](https://github.com/ArchDev/unidirectional-akka-re
 We have [external](https://github.com/ArchDev/unidirectional-akka-redux/blob/master/backend/src/main/scala/me/archdev/api/external/Protocol.scala) and [internal](https://github.com/ArchDev/unidirectional-akka-redux/blob/master/backend/src/main/scala/me/archdev/api/internal/Protocol.scala) parts of protocol. This separation needed to control flow communication flow and be sure that user cannot execute some internal commands. To be clear, internal protocol part in project needed only for pattern matching in some places so you can easily remove it, because internal protocol always described near actor that will handle it.
 
 ## Copyright
-
-Copyright (C) 2015 Arthur Kushka.
-
+Copyright (C) 2016 Arthur Kushka.   
 Distributed under the MIT License.
 
 
