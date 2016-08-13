@@ -3,10 +3,11 @@ scala:
 - 2.11.8
 jdk:
 - oraclejdk8
-before_install:
-- sudo apt-get update -qq
-- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -sudo apt-get install -y nodejs
-- sudo apt-get install -qq npm
+addons:
+  apt:
+    packages:
+    - nodejs
+    - npm
 script:
 - cd ./backend && sbt test
 - cd ../frontend && npm install && gulp test
