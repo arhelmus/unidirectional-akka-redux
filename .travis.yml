@@ -1,13 +1,13 @@
+ox: osx
 language: scala
 scala:
 - 2.11.8
 jdk:
 - oraclejdk8
-addons:
-  apt:
-    packages:
-    - nodejs
-    - npm
+before install:
+- brew update
+- brew install node
+- brew install npm
 script:
 - cd ./backend && sbt test
 - cd ../frontend && npm install && gulp test
