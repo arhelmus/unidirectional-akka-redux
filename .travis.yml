@@ -1,11 +1,13 @@
 os: osx
-language: scala
 scala:
 - 2.11.8
 before_install:
 - brew update
 - brew install node
 - brew install npm
+- brew cask install java
+- brew install scala
+- brew install sbt
 script:
 - cd ./backend && sbt test
 - cd ../frontend && npm install && gulp test
