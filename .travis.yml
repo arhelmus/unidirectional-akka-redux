@@ -1,0 +1,13 @@
+language: 
+- scala
+- node_js
+scala:
+- 2.11.8
+node_js:
+- node
+jdk:
+- oraclejdk8
+script:
+- sbt test
+- mvn install
+- gulp test
