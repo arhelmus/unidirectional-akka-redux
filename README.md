@@ -1,4 +1,4 @@
-# Unidirection web application
+# Unidirection web application [![Build Status](https://travis-ci.org/ArchDev/unidirectional-akka-redux.svg?branch=master)](https://travis-ci.org/ArchDev/unidirectional-akka-redux)  
 In this repository you can find example of unidirection web application builded with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org) and [Akka](http://akka.io). Project done on [Scala](http://www.scala-lang.org) and [ES6](https://nodejs.org/en/docs/es6). Communication between client and server working on top of websocket connection with JSON API. To do some changes on server, client must put command in channel, server will handle it and produce event that will be published across connected clients.
 
 ## Frontend
