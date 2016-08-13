@@ -2,8 +2,6 @@ os: osx
 language: scala
 scala:
 - 2.11.8
-jdk:
-- oraclejdk8
 before_install:
 - brew update
 - brew install node
