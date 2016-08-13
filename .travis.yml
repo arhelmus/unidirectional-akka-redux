@@ -6,7 +6,7 @@ before_install:
 - brew unlink node
 - brew unlink npm
 - brew install node
-- brew install npm
+- brew install npm && npm install -g gulp-cli
 - brew cask install java
 - brew install scala
 - brew install sbt
