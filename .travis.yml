@@ -5,7 +5,9 @@ jdk:
 - oraclejdk8
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install -qq nodejs npm
+- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+- sudo apt-get install -qq npm
 script:
 - cd ./backend && sbt test
 - cd ../frontend && npm install && gulp test
