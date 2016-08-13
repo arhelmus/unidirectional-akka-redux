@@ -3,6 +3,8 @@ scala:
 - 2.11.8
 before_install:
 - brew update
+- brew unlink node
+- brew unlink npm
 - brew install node
 - brew install npm
 - brew cask install java
