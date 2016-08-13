@@ -3,7 +3,6 @@ package me.archdev
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import me.archdev.http.{HttpRoute, HttpServer}
-import me.archdev.websocket.RouteActor$
 
 object Boot extends App {
 
