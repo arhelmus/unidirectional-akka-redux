@@ -14,6 +14,6 @@ object Boot extends App {
   val tweetRoomActor = TweetRoomActor()
   val routeActor = RouteActor(tweetRoomActor)
 
-  new HttpServer(HttpRoute(routeActor)).launch("localhost", config.getInt("http.port"))
+  new HttpServer(HttpRoute(routeActor)).launch("0.0.0.0", config.getInt("http.port"))
 
 }
