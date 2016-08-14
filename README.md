@@ -1,6 +1,9 @@
 # Unidirection web application &nbsp;[![Build Status](https://travis-ci.org/ArchDev/unidirectional-akka-redux.svg?branch=master)](https://travis-ci.org/ArchDev/unidirectional-akka-redux)  
 In this repository you can find example of unidirection web application builded with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org) and [Akka](http://akka.io). Project done on [Scala](http://www.scala-lang.org) and [ES6](https://nodejs.org/en/docs/es6). Communication between client and server working on top of websocket connection with JSON API. To do some changes on server, client must put command in channel, server will handle it and produce event that will be published across connected clients.
 
+### Working example!
+You can play with application [here](https://archdev.github.io/unidirectional-akka-redux/). Just be patient, heroku instance startup time not so low ;)
+
 ## Frontend
 On a client side, as mentioned before we used React/Redux and ES6. High level logic described in [app.es6](https://github.com/ArchDev/unidirectional-akka-redux/blob/master/frontend/src/app.es6), we have two stores, one for commands and one for events. Commands store used to put event on websocket connection. Events store used by websocket connection to publish changes on all components.
 
