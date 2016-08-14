@@ -1,4 +1,4 @@
-name := "tweet-the-world-backend"
+name := "unidirectional-app-server"
 
 version := "1.0"
 
@@ -16,6 +16,8 @@ libraryDependencies ++= {
     "io.circe" %% "circe-core" % circeVersion,
     "io.circe" %% "circe-generic" % circeVersion,
     "io.circe" %% "circe-parser" % circeVersion,
+
+    "com.typesafe" % "config" % "1.3.0",
 
     "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test",
     "com.typesafe.akka" %% "akka-http-testkit" % akkaVersion % "test",
